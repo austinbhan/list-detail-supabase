@@ -1,8 +1,6 @@
 // This Page is Connected to vegetable-page HTML
 import { getVegetable } from '../vegetable-supabase.js';
 
-
-// New Function Attempt 
 const vegetableDiv = document.getElementById('vegetable-div');
 
 async function loadData() {
