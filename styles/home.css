@@ -24,3 +24,8 @@
     width: 50%;
     translate: 0% 25%;
 }
+
+.main-logo {
+    max-width: 10%;
+    height: auto;
+}
