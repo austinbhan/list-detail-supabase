@@ -1,22 +1,15 @@
 // This Page is Connected to vegetable-page HTML
+import { getVegetable } from '../vegetable-supabase.js';
 
-import { findById } from '../utils.js';
-import { vegetables } from '../vegetables.js';
 
-const params = new URLSearchParams(window.location.search);
+// New Function Attempt 
+const vegetableDiv = document.getElementById('vegetable-div');
 
-const vegetable = findById(params.get('id'), vegetables); 
-console.log(vegetable);
+async function loadData() {
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id');
+    const vegetable = await getVegetable(id);
+    vegetableDiv.textContent = vegetable.name;
+}
 
-// create element in vegetable detail index, then pull into vegetable-page.js,
-// and then target key value inside of the array.
-const hi = document.getElementById('hi');
-hi.textContent = vegetable.name;
-
-const img = document.createElement('img');
-img.src = `../assets/${vegetable.name}.jpg`;
-img.classList.add('vegetable-picture');
-
-hi.append(img);
-
-console.log(vegetable.image);
+loadData();
