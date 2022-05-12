@@ -17,6 +17,7 @@ hi.textContent = vegetable.name;
 
 const img = document.createElement('img');
 img.src = `../assets/${vegetable.name}.jpg`;
+img.classList.add('vegetable-picture');
 
 hi.append(img);
 
