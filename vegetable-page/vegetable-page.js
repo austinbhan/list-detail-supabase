@@ -3,8 +3,6 @@
 import { findById } from '../utils.js';
 import { vegetables } from '../vegetables.js';
 
-console.log('Your JS is fully functional');
-
 const params = new URLSearchParams(window.location.search);
 
 const vegetable = findById(params.get('id'), vegetables); 
