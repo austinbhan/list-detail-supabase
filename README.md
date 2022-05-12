@@ -8,6 +8,10 @@ If you work on more than one feature at a time, you are guaranteed to multiply y
 
 1) **Make a drawing of your app. Simple "wireframes"** 
 1) **Look at the drawing and name the HTML elements you'll need to realize your vision**
+<!--`<div id="Carrot">
+        <img src=".assets/carrot.jpg">
+        <h2>Say hi to Carrot. They're Orange and cost $1</h2>
+    </div>`;-->
 1) **Look at the drawing and imagine using the app. What _state_ do you need to track?** 
 1) **For each HTML element ask: Why do I need this? (i.e., "we need div to display the results in")** 
 1) **Once we know _why_ we need each element, think about how to implement the "Why" as a "How" (i.e., `resultsEl.textContent = newResults`)**

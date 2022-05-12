@@ -1,1 +1,26 @@
 /* add home page styles here */
+
+#carrot {
+    background-color: lightgrey;
+}
+
+#tomato {
+    background-color: lightgreen;
+}
+
+#potato {
+    background-color: lightcoral;
+}
+
+#beet {
+    background-color: lightblue;
+}
+
+.size {
+    max-width: 100px;
+    max-height: 100px;
+    display: block;
+    margin: auto;
+    width: 50%;
+    translate: 0% 25%;
+}
