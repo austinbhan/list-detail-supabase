@@ -4,13 +4,13 @@ const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZ
 const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
 export async function getVegetables() {
-    const response = await client.from('vege-table').select('*');
+    const response = await client.from('vege_table').select('*');
     console.log(response);
     return response.data;
 }
 
 export async function getVegetable(id) {
-    const response = await client.from('vege-table)').select('*').match({ id: id }).single();
+    const response = await client.from('vege_table').select('*').match({ id: id }).single();
     console.log(response);
     return response.data;
 }

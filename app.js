@@ -1,19 +1,21 @@
 // import functions and grab DOM elements
-import { vegetables } from '../vegetables.js';
-import { renderVegetable } from '../utils.js';
 
-const vegetableSection = document.getElementById('vegetable-section');
+import { renderVegetable } from './utils.js';
+import { getVegetables } from './vegetable-supabase.js';
 
-function renderVegetables() {
-    vegetableSection.textContent = '';
+async function loadData() {
+    const vegetables = await getVegetables();
+    console.log(vegetables);
+    const main = document.getElementById('vegetable-section');
+
     for (let vegetable of vegetables) {
-        const div = renderVegetable(vegetable);
-        vegetableSection.append(div);
+        const vegetableDiv = renderVegetable(vegetable);
+        main.append(vegetableDiv);
     }
-    return vegetableSection;
 }
 
-vegetableSection.append(renderVegetables());
+loadData();
+
 
 // let state
 
@@ -21,4 +23,3 @@ vegetableSection.append(renderVegetables());
   // get user input
   // use user input to update state 
   // update DOM to reflect the new state
-
