@@ -18,7 +18,3 @@ export function renderVegetable(vegetable) {
 
     return div;
 }
-
-export function findById(id, veg) {
-    return veg.find((booger) => booger.id === id);
-}
